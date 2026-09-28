@@ -213,39 +213,79 @@
             <div class="max-w-5xl mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Unsere Speisekarte</h2>
-                    <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8">Entdecken Sie unsere große Auswahl an
+                    <p class="text-xl text-gray-400 max-w-2xl mx-auto">Entdecken Sie unsere große Auswahl an
                         asiatischen Spezialitäten. Einfach scrollen, um alle Gerichte zu sehen.</p>
-
-                    <!-- Nút tải PDF rõ ràng, trỏ tới file Mekong_Menu.pdf -->
-                    <a href="Mekong_Menu_Page_1.pdf" download
-                        class="inline-flex items-center gap-3 bg-white text-mekong-dark hover:bg-gray-200 font-bold py-4 px-8 rounded-xl text-xl transition shadow-lg mb-8">
-                        <i class="fa-solid fa-file-pdf text-red-600 text-2xl"></i>
-                        Download Speisekarte (PDF)
-                    </a>
                 </div>
 
-                <!-- Khu vực hiển thị Menu dạng Ảnh -->
-                <div
-                    class="flex flex-col mx-auto shadow-2xl rounded-2xl overflow-hidden border border-gray-800 bg-mekong-card">
+                <!-- Khu vực hiển thị Menu dạng Ảnh & Nút tải tương ứng -->
+                <!-- Lớp gap-16 tạo khoảng cách lớn (64px) giữa trang 1 và trang 2 -->
+                <div class="flex flex-col gap-16 mx-auto">
 
-                    <!-- Ảnh Trang 1 -->
-                    <!-- Thêm class glightbox và cursor-zoom-in để tạo biểu tượng kính lúp khi rê chuột -->
-                    <a href="Mekong_Menu_Page_1.jpg"
-                        class="glightbox block border-b-4 border-mekong-orange cursor-zoom-in"
-                        data-gallery="menu-gallery">
-                        <img src="Mekong_Menu_Page_1.jpg" alt="MEKONG Speisekarte Seite 1 - Sushi & Maki"
-                            class="w-full h-auto block hover:opacity-80 transition-opacity duration-300" loading="lazy">
-                    </a>
+                    <!-- PHẦN TRANG 1 -->
+                    <div class="flex flex-col items-center w-full">
 
-                    <!-- Ảnh Trang 2 -->
-                    <a href="Mekong_Menu_Page_2.jpg" class="glightbox block cursor-zoom-in" data-gallery="menu-gallery">
-                        <img src="Mekong_Menu_Page_2.jpg" alt="MEKONG Speisekarte Seite 2 - Hauptgerichte & Vorspeise"
-                            class="w-full h-auto block hover:opacity-80 transition-opacity duration-300" loading="lazy">
-                    </a>
+                        <!-- Chú thích cho Trang 1 -->
+                        <div class="w-full text-left mb-4 px-2">
+                            <h3 class="text-3xl font-bold text-mekong-orange flex items-center gap-3">
+                                <i class="fa-solid fa-fish"></i> Teil 1: Sushi Spezialitäten & Menüs
+                            </h3>
+                            <p class="text-gray-400 mt-2 text-lg">Entdecken Sie unsere Vielfalt an Maki, Nigiri und
+                                Crunchy Rolls.</p>
+                        </div>
+
+                        <!-- Ảnh Trang 1 -->
+                        <div
+                            class="w-full shadow-2xl rounded-2xl overflow-hidden border border-gray-800 bg-mekong-card mb-6">
+                            <a href="Mekong_Menu_Page_1.jpg" class="glightbox block cursor-zoom-in"
+                                data-gallery="menu-gallery">
+                                <img src="Mekong_Menu_Page_1.jpg" alt="MEKONG Speisekarte Seite 1 - Sushi & Maki"
+                                    class="w-full h-auto block hover:opacity-80 transition-opacity duration-300"
+                                    loading="lazy">
+                            </a>
+                        </div>
+                        <!-- Nút tải PDF Trang 1 -->
+                        <a href="Mekong_Menu_Page_1.pdf" download
+                            class="inline-flex items-center gap-3 bg-white text-mekong-dark hover:bg-gray-200 font-bold py-3 px-8 rounded-xl text-xl transition shadow-lg">
+                            <i class="fa-solid fa-file-pdf text-red-600 text-2xl"></i>
+                            Download Seite 1 (PDF)
+                        </a>
+                    </div>
+
+                    <!-- PHẦN TRANG 2 -->
+                    <div class="flex flex-col items-center w-full">
+
+                        <!-- Chú thích cho Trang 2 -->
+                        <div class="w-full text-left mb-4 px-2">
+                            <h3 class="text-3xl font-bold text-mekong-orange flex items-center gap-3">
+                                <i class="fa-solid fa-bowl-hot"></i> Teil 2: Warme Gerichte & Vorspeisen
+                            </h3>
+                            <p class="text-gray-400 mt-2 text-lg">Authentische Hauptgerichte, Currys, Suppen und
+                                Nudelgerichte.</p>
+                        </div>
+
+                        <!-- Ảnh Trang 2 -->
+                        <div
+                            class="w-full shadow-2xl rounded-2xl overflow-hidden border border-gray-800 bg-mekong-card mb-6">
+                            <a href="Mekong_Menu_Page_2.jpg" class="glightbox block cursor-zoom-in"
+                                data-gallery="menu-gallery">
+                                <img src="Mekong_Menu_Page_2.jpg"
+                                    alt="MEKONG Speisekarte Seite 2 - Hauptgerichte & Vorspeise"
+                                    class="w-full h-auto block hover:opacity-80 transition-opacity duration-300"
+                                    loading="lazy">
+                            </a>
+                        </div>
+                        <!-- Nút tải PDF Trang 2 -->
+                        <a href="Mekong_Menu_Page_2.pdf" download
+                            class="inline-flex items-center gap-3 bg-white text-mekong-dark hover:bg-gray-200 font-bold py-3 px-8 rounded-xl text-xl transition shadow-lg">
+                            <i class="fa-solid fa-file-pdf text-red-600 text-2xl"></i>
+                            Download Seite 2 (PDF)
+                        </a>
+                    </div>
+
                 </div>
 
-                <!-- Ghi chú về dị ứng (Allergene) như trong menu gốc[cite: 7] -->
-                <p class="text-center text-gray-500 text-base mt-8">
+                <!-- Ghi chú về dị ứng -->
+                <p class="text-center text-gray-500 text-base mt-12">
                     * Bei Fragen zu Allergenen oder Zusatzstoffen sprechen Sie uns gerne an.
                 </p>
             </div>

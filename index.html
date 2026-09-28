@@ -18,6 +18,9 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Thư viện GLightbox CSS cho hiệu ứng phóng to ảnh -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -207,149 +210,44 @@
         </section>
 
         <section id="speisekarte" class="py-20 bg-[#0a0a0a]">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="text-center mb-16">
+            <div class="max-w-5xl mx-auto px-4">
+                <div class="text-center mb-12">
                     <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Unsere Speisekarte</h2>
                     <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8">Entdecken Sie unsere große Auswahl an
-                        asiatischen Spezialitäten. Frisch zubereitet und voller Geschmack.</p>
+                        asiatischen Spezialitäten. Einfach scrollen, um alle Gerichte zu sehen.</p>
 
-                    <!-- Nút tải PDF rõ ràng -->
-                    <a href="#"
-                        class="inline-flex items-center gap-3 bg-white text-mekong-dark hover:bg-gray-200 font-bold py-4 px-8 rounded-xl text-xl transition">
+                    <!-- Nút tải PDF rõ ràng, trỏ tới file Mekong_Menu.pdf -->
+                    <a href="Mekong_Menu_Page_1.pdf" download
+                        class="inline-flex items-center gap-3 bg-white text-mekong-dark hover:bg-gray-200 font-bold py-4 px-8 rounded-xl text-xl transition shadow-lg mb-8">
                         <i class="fa-solid fa-file-pdf text-red-600 text-2xl"></i>
                         Download Speisekarte (PDF)
                     </a>
                 </div>
 
-                <!-- Khung chứa các danh mục món ăn -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Khu vực hiển thị Menu dạng Ảnh -->
+                <div
+                    class="flex flex-col mx-auto shadow-2xl rounded-2xl overflow-hidden border border-gray-800 bg-mekong-card">
 
-                    <!-- Danh mục 1: Sushi -->
-                    <div class="bg-mekong-card p-6 md:p-8 rounded-2xl border border-gray-800">
-                        <h3 class="text-3xl font-bold text-mekong-orange mb-6 flex items-center gap-3">
-                            <i class="fa-solid fa-fish"></i> Sushi
-                        </h3>
-                        <ul class="space-y-6">
-                            <li class="border-b border-gray-700 pb-4">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-xl font-bold text-white">Maki Sushi (6 Stk.)</h4>
-                                    <span class="text-xl font-bold text-mekong-orange">ab 3,50 €</span>
-                                </div>
-                                <p class="text-gray-400 text-lg">Reisrolle mit Seetang ummantelt (z.B. Avocado, Lachs,
-                                    Gurke)</p>
-                            </li>
-                            <li class="border-b border-gray-700 pb-4">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-xl font-bold text-white">Nigiri Sushi (2 Stk.)</h4>
-                                    <span class="text-xl font-bold text-mekong-orange">ab 3,00 €</span>
-                                </div>
-                                <p class="text-gray-400 text-lg">Reisbällchen mit Belag (Lachs, Thunfisch, Garnele)</p>
-                            </li>
-                            <li>
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-xl font-bold text-white">Crunchy Roll (6 Stk.)</h4>
-                                    <span class="text-xl font-bold text-mekong-orange">8,00 €</span>
-                                </div>
-                                <p class="text-gray-400 text-lg">Große panierte Rollen mit Sesam (Ebi, Tuna, Salmon)</p>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- Ảnh Trang 1 -->
+                    <!-- Thêm class glightbox và cursor-zoom-in để tạo biểu tượng kính lúp khi rê chuột -->
+                    <a href="Mekong_Menu_Page_1.jpg"
+                        class="glightbox block border-b-4 border-mekong-orange cursor-zoom-in"
+                        data-gallery="menu-gallery">
+                        <img src="Mekong_Menu_Page_1.jpg" alt="MEKONG Speisekarte Seite 1 - Sushi & Maki"
+                            class="w-full h-auto block hover:opacity-80 transition-opacity duration-300" loading="lazy">
+                    </a>
 
-                    <!-- Danh mục 2: Vorspeise -->
-                    <div class="bg-mekong-card p-6 md:p-8 rounded-2xl border border-gray-800">
-                        <h3 class="text-3xl font-bold text-mekong-orange mb-6 flex items-center gap-3">
-                            <i class="fa-solid fa-leaf"></i> Vorspeise & Suppen
-                        </h3>
-                        <ul class="space-y-6">
-                            <li class="border-b border-gray-700 pb-4">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-xl font-bold text-white">Nem Chay (6 Stk.)</h4>
-                                    <span class="text-xl font-bold text-mekong-orange">4,50 €</span>
-                                </div>
-                                <p class="text-gray-400 text-lg">Frittierte Mini-Frühlingsrollen mit Süß-Sauer Soße
-                                    (vegetarisch)</p>
-                            </li>
-                            <li class="border-b border-gray-700 pb-4">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-xl font-bold text-white">Gebackene Wantan (5 Stk.)</h4>
-                                    <span class="text-xl font-bold text-mekong-orange">4,50 €</span>
-                                </div>
-                                <p class="text-gray-400 text-lg">Hausgemachte Teigtaschen mit Hackfleisch</p>
-                            </li>
-                            <li>
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-xl font-bold text-white">Miso Suppe</h4>
-                                    <span class="text-xl font-bold text-mekong-orange">4,00 €</span>
-                                </div>
-                                <p class="text-gray-400 text-lg">Mit Seetang und Tofu</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Danh mục 3: Hauptgerichte -->
-                    <div class="bg-mekong-card p-6 md:p-8 rounded-2xl border border-gray-800">
-                        <h3 class="text-3xl font-bold text-mekong-orange mb-6 flex items-center gap-3">
-                            <i class="fa-solid fa-bowl-rice"></i> Hauptgerichte
-                        </h3>
-                        <ul class="space-y-6">
-                            <li class="border-b border-gray-700 pb-4">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-xl font-bold text-white">Curry Soße (scharf)</h4>
-                                    <span class="text-xl font-bold text-mekong-orange">ab 10,00 €</span>
-                                </div>
-                                <p class="text-gray-400 text-lg">Rotes Curry mit Kokosmilch, Gemüse. Mit Hühnerfleisch,
-                                    Rind, Ente oder Tofu.</p>
-                            </li>
-                            <li class="border-b border-gray-700 pb-4">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-xl font-bold text-white">Mango Soße</h4>
-                                    <span class="text-xl font-bold text-mekong-orange">ab 10,00 €</span>
-                                </div>
-                                <p class="text-gray-400 text-lg">Cremige Mangosoße mit Kokosmilch und Gemüse.</p>
-                            </li>
-                            <li>
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-xl font-bold text-white">Nasi Goreng</h4>
-                                    <span class="text-xl font-bold text-mekong-orange">12,00 €</span>
-                                </div>
-                                <p class="text-gray-400 text-lg">Gebratener Reis mit verschiedenem Gemüse,
-                                    Hühnerfleisch, Garnelen.</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Danh mục 4: Nudel Gerichte -->
-                    <div class="bg-mekong-card p-6 md:p-8 rounded-2xl border border-gray-800">
-                        <h3 class="text-3xl font-bold text-mekong-orange mb-6 flex items-center gap-3">
-                            <i class="fa-solid fa-plate-wheat"></i> Nudel Gerichte
-                        </h3>
-                        <ul class="space-y-6">
-                            <li class="border-b border-gray-700 pb-4">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-xl font-bold text-white">Bami Goreng</h4>
-                                    <span class="text-xl font-bold text-mekong-orange">11,00 €</span>
-                                </div>
-                                <p class="text-gray-400 text-lg">Gebratene Nudeln mit verschiedenem Gemüse,
-                                    Hühnerfleisch, Garnelen.</p>
-                            </li>
-                            <li class="border-b border-gray-700 pb-4">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-xl font-bold text-white">Udon Nudeln</h4>
-                                    <span class="text-xl font-bold text-mekong-orange">ab 11,00 €</span>
-                                </div>
-                                <p class="text-gray-400 text-lg">Dicke Udon Nudeln, gebraten mit verschiedenem Gemüse
-                                    und Fleisch nach Wahl.</p>
-                            </li>
-                            <li>
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-xl font-bold text-white">China Nudeln</h4>
-                                    <span class="text-xl font-bold text-mekong-orange">ab 10,00 €</span>
-                                </div>
-                                <p class="text-gray-400 text-lg">Klassische gebratene Nudeln mit Gemüse.</p>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- Ảnh Trang 2 -->
+                    <a href="Mekong_Menu_Page_2.jpg" class="glightbox block cursor-zoom-in" data-gallery="menu-gallery">
+                        <img src="Mekong_Menu_Page_2.jpg" alt="MEKONG Speisekarte Seite 2 - Hauptgerichte & Vorspeise"
+                            class="w-full h-auto block hover:opacity-80 transition-opacity duration-300" loading="lazy">
+                    </a>
                 </div>
+
+                <!-- Ghi chú về dị ứng (Allergene) như trong menu gốc[cite: 7] -->
+                <p class="text-center text-gray-500 text-base mt-8">
+                    * Bei Fragen zu Allergenen oder Zusatzstoffen sprechen Sie uns gerne an.
+                </p>
             </div>
         </section>
 
@@ -501,6 +399,22 @@
                         });
                     }
                 });
+            });
+        });
+    </script>
+
+    <!-- Thư viện GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        // Kích hoạt tính năng phóng to ảnh
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightbox = GLightbox({
+                selector: '.glightbox', // Kích hoạt cho các thẻ có class này
+                touchNavigation: true,  // Cho phép vuốt qua lại trên điện thoại
+                loop: true,             // Vuốt tới ảnh cuối sẽ quay lại ảnh đầu
+                zoomable: true,         // Kích hoạt tính năng zoom in/out
+                openEffect: 'zoom',     // Hiệu ứng mở dạng zoom mượt
+                closeEffect: 'fade'     // Hiệu ứng đóng mờ dần
             });
         });
     </script>
